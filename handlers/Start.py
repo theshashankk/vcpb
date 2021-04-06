@@ -24,7 +24,7 @@ I ᴄᴀɴ sᴛʀᴇᴀᴍ ᴍᴜsɪᴄ ɪɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ 😊😊
             [
                 [
                     InlineKeyboardButton(
-                        "⚒COMMANDS", url="https://telegra.ph/MusicBot-Robot-MusicBot-Robo-03-14"
+                        "⚒COMMANDS", url="https://telegra.ph/Music-Bot-04-06"
                     )
                 ],
                 [
