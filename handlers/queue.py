@@ -10,18 +10,18 @@ from helpers.filters import sudo_only
 @errors
 def clear_queue(_, message: Message):
     if player.queue.empty():
-        message.reply_text("<b>❌ The queue is empty</b>", quote=False)
+        message.reply_text("<b>Rapper ❌ The queue is empty</b>", quote=False)
     else:
         with player.queue.mutex:
             player.queue.queue.clear()
-        message.reply_text("<b>✅ Queue cleared</b>", quote=False)
+        message.reply_text("<b>Rapper ✅ Queue cleared</b>", quote=False)
 
 
 @Client.on_message(filters.command("queue"))
 @errors
 def queue(_, message: Message):
     if player.queue.empty():
-        message.reply_text("<b>❌ The queue is empty</b>", quote=False)
+        message.reply_text("<b>Rapper ❌ The queue is empty</b>", quote=False)
     else:
         message.reply_text(
             "<b>🔢 Total items in the queue:</b> {}\n\n<b>🔟 First 10 items:</b>\n{}".format(
