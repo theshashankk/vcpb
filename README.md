@@ -1,4 +1,4 @@
-# 🎧 VoiceChatPyroBot — The first Telegram voice chat bot to be open-sourced
+# 🎧 The Shashank music bomt — The Telegram voice chat bot to be open-sourced
 
 ## 💭 Logic
 
