@@ -13,7 +13,7 @@ def pause(_, message: Message):
         message.reply_text("<b>❌ Nothing is playing</b>", quote=False)
     else:
         player.mpv.pause = True
-        message.reply_text("<b>⏸ Paused</b>", quote=False)
+        message.reply_text("<b>Randi Rona Paused🤒</b>", quote=False)
 
 
 @Client.on_message((filters.command("resume") | filters.command("play")) & sudo_only)
