@@ -53,4 +53,4 @@ def seekb(_, message: Message):
         player.mpv.seek(-int(message.command[1]))
         message.reply_text(f"<b>⏪ Reversed {message.command[1]} seconds</b>")
     else:
-        message.reply_text("<b>❌ Nothing is playing</b>")
+        message.reply_text("<b>Rapper ❌ Nothing is playing</b>")
