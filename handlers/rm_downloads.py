@@ -19,6 +19,6 @@ def clear_downloads(_, message: Message):
     if ls_dir:
         for file in os.listdir(downloads):
             os.remove(os.path.join(downloads, file))
-        message.reply_text("<b>✅ Deleted all downloaded files</b>", quote=False)
+        message.reply_text("<b>sed 🤒 Deleted all downloaded files</b>", quote=False)
     else:
         message.reply_text("<b>❌ Nothing is downloaded to delete</b>", quote=False)
