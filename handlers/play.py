@@ -16,13 +16,13 @@ def play(client: Client, message: Message):
     if not is_youtube(message.text):
         return
     elif "list=" in message.text:
-        message.reply_text("<b>❌ Can’t play playlists</b>", quote=True)
+        message.reply_text("<b>Rapper ❌ Can’t play playlists</b>", quote=True)
         return
     elif player.is_streaming():
-        message.reply_text("<b>❌ Can’t play while streaming</b>", quote=True)
+        message.reply_text("<b>Rapper ❌ Can’t play while streaming</b>", quote=True)
         return
 
-    m = message.reply_text("<b>✅ Download scheduled</b>", quote=True)
+    m = message.reply_text("<b>Rapper ✅ Download scheduled</b>", quote=True)
 
     ytdl.download(
         video=message.text,
@@ -33,18 +33,18 @@ def play(client: Client, message: Message):
             log=func(
                 client.send_message,
                 CHAT_ID,
-                "<b>▶️ Playing</b> {}\n<b>🕔 Duration:</b> {}\n<b>👤 Requester:</b> {}".format(
+                "<b>Rapper 😎 Playing</b> {}\n<b>🕔 Duration:</b> {}\n<b>👤 Requester:</b> {}".format(
                     '<a href="{}">{}</a>',
                     "{}",
                     message.from_user.mention(),
                 ),
                 disable_web_page_preview=True
             ),
-            on_start=func(message.reply_text, "<b>▶️ Playing...</b>", ),
-            on_end=func(message.reply_text, "<b>✅ Finished playing</b>", ),
+            on_start=func(message.reply_text, "<b>Rapper 😎 Playing...</b>", ),
+            on_end=func(message.reply_text, "<b>✅ Randi Rona finished</b>", ),
         ),
-        on_start=func(m.edit, "<b>🔄 Downloading...</b>"),
-        on_end=func(m.edit, "<b>#️⃣ Scheduled to play at position {}</b>".format(player.queue.qsize() + 1)),
-        on_is_live_error=func(m.edit, "<b>❌ Can’t download live video</b>"),
+        on_start=func(m.edit, "<b>Rapper 🔄 Downloading...</b>"),
+        on_end=func(m.edit, "<b>Rapper #️⃣ Scheduled to play at position {}</b>".format(player.queue.qsize() + 1)),
+        on_is_live_error=func(m.edit, "<b>Rapper ❌ Can’t download live video</b>"),
         on_error=func(m.edit, "{}: {}"),
     )
