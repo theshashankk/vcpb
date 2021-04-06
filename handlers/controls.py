@@ -10,7 +10,7 @@ from helpers.decorators import errors
 @errors
 def pause(_, message: Message):
     if player.mpv.pause:
-        message.reply_text("<b>❌ Nothing is playing</b>", quote=False)
+        message.reply_text("<b>Rapper ❌ Nothing is playing</b>", quote=False)
     else:
         player.mpv.pause = True
         message.reply_text("<b>Randi Rona Paused🤒</b>", quote=False)
@@ -21,9 +21,9 @@ def pause(_, message: Message):
 def resume(_, message: Message):
     if player.mpv.pause:
         player.mpv.pause = False
-        message.reply_text("<b>▶️Resumed</b>", quote=False)
+        message.reply_text("<b>Rapper ▶️Resumed</b>", quote=False)
     else:
-        message.reply_text("<b>❌ Nothing is paused</b>", quote=False)
+        message.reply_text("<b>Rapper ❌ Nothing is paused</b>", quote=False)
 
 
 @Client.on_message(filters.command("skip") & sudo_only)
@@ -31,9 +31,9 @@ def resume(_, message: Message):
 def skip(_, message: Message):
     if player.mpv.filename:
         player.mpv.stop()
-        message.reply_text("<b>⏩ Skipped the current song</b>", quote=False)
+        message.reply_text("<b>Rappee ⏩ Skipped the current song</b>", quote=False)
     else:
-        message.reply_text("<b>❌ Nothing is playing</b>", quote=False)
+        message.reply_text("<b>Rappee❌ Nothing is playing</b>", quote=False)
 
 
 @Client.on_message(filters.command("seekf") & sudo_only)
