@@ -9,7 +9,7 @@ RUN apt-get update -y && \
         ffmpeg && \
     git clone https://github.com/theshashankk/vcpb && \
     cd MusicBot && \
-    git clone https://github.com/pytgcalls/pytgcalls.git && \
+    git clone https://github.com/theshashankk/vcpb && \
     cd pytgcalls && \
     npm install && \
     npm run prepare && \
